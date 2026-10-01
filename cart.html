@@ -147,12 +147,22 @@
     <main>
       <section class="cart-section">
         <h1>Your Shopping Cart</h1>
+        <div
+          class="empty-cart-state"
+          id="empty-cart-state"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          <p>Your cart is empty.</p>
+          <a class="empty-cart-home" href="./index.html">Go to Homepage</a>
+        </div>
         <div id="cart-items">
           <!-- Cart products should appear here -->
         </div>
         <div class="cart-total">
           <button id="clearCart">Clear Cart</button>
-          <h2>Total:₦<span id="cart-total">0</span></h2>
+          <h2 id="checkCart">Total:₦<span id="cart-total">0</span></h2>
         </div>
         <!-- CUSTOMER DETAILS -->
         <div class="customer-details">

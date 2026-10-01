@@ -48,7 +48,7 @@ buttons.forEach(function (button) {
       notification.setAttribute("role", "status");
       notification.setAttribute("aria-live", "polite");
       notification.style.cssText =
-        "position:fixed;top:20px;right:20px;z-index:10000;padding:14px 20px;background:#723717;color:#fff;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.2);font:16px Arial,sans-serif;opacity:0;transform:translateY(-10px);transition:opacity .2s ease,transform .2s ease;";
+        "position:fixed;top:70px;right:20px;z-index:10000;padding:14px 20px;background:#723717;color:#fff;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.2);font:16px Arial,sans-serif;opacity:0;transform:translateY(-10px);transition:opacity .2s ease,transform .2s ease;";
       document.body.appendChild(notification);
     }
     notification.textContent = name + " added to cart!";
@@ -125,6 +125,17 @@ removeButtons.forEach(function (button) {
 
 // CLEAR CART
 const clearCart = document.getElementById("clearCart");
+const checkCart = document.getElementById("checkCart");
+const emptyCartState = document.getElementById("empty-cart-state");
+const cartSummary = document.querySelector(".cart-total");
+const customerDetails = document.querySelector(".customer-details");
+
+function updateEmptyCartState() {
+  const isEmpty = cart.length === 0;
+  if (emptyCartState) emptyCartState.hidden = !isEmpty;
+  if (cartSummary) cartSummary.hidden = isEmpty;
+  if (customerDetails) customerDetails.hidden = isEmpty;
+}
 
 function clearAll() {
   cart = [];
@@ -132,7 +143,10 @@ function clearAll() {
   if (cartTotal) cartTotal.textContent = "0";
   if (cartItems) cartItems.innerHTML = "";
   updateCartCount();
+  updateEmptyCartState();
 }
+
+updateEmptyCartState();
 
 if (clearCart) {
   clearCart.addEventListener("click", function () {
