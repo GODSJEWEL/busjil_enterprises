@@ -1,0 +1,776 @@
+/* ==============GENERAL STYLES================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fffaf2;
+  color: #3b2418;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+/* ==============NAVIGATION BAR================ */
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.2;
+  min-height: 30px;
+}
+.nav-links svg {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+}
+.nav-links a[href="./contact.html"] svg {
+  width: 22px;
+  height: 22px;
+  color: #f9f6f2;
+  fill: #f9f6f2;
+  stroke: #f9f6f2;
+}
+
+header {
+  background-color: #2b170d;
+  color: #f9f6f2;
+  padding: 20px 6%;
+  border-bottom: 1px solid #4a2c20;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f9f6f2;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  color: #f9f6f2;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #eadfd2;
+}
+
+/* ==============HERO SECTION================ */
+.hero {
+  min-height: 600px;
+  padding: 70px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #d9bfa5;
+}
+.hero-content {
+  width: 50%;
+}
+.small-heading {
+  color: #8b5e3c;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.hero h1 {
+  font-size: 55px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #3b2418;
+}
+.hero-content p {
+  font-size: 18px;
+  /* margin-bottom: 25px; */
+}
+.hero-image {
+  /* border: green solid 5px; */
+  width: 45%;
+}
+.hero-image img {
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ==============BUTTONS================ */
+.shop-button {
+  display: inline-block;
+  background-color: #5a321f;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.shop-button:hover {
+  background-color: #8b5e3c;
+}
+/* ==============CATEGORIES================ */
+.categories {
+  padding: 70px 6%;
+  text-align: center;
+  background-color: #eadfd2;
+}
+.categories h2,
+.featured-products h2,
+.about-preview h2,
+.call-to-action h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #3b2418;
+}
+.category-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.category-card {
+  /* width: 30%; */
+  width: 28%;
+  min-width: 220px;
+  background-color: #fffaf2;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: trsnsform 0.3s;
+}
+.category-card:hover {
+  transform: translateY(-5px);
+}
+.category-card img {
+  height: 300px;
+  object-fit: cover;
+}
+.category-card h3 {
+  padding: 20px;
+  color: #5a321f;
+  font-size: 21px;
+}
+.category-card h3 svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 6px;
+  vertical-align: -5px;
+}
+
+/* ==============FEATURED PRODUCTS================ */
+.featured-products {
+  padding: 70px 6%;
+  text-align: center;
+  background-color: #d9bfa5;
+}
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.product-card {
+  /* width: 30%; */
+  width: 28%;
+  min-width: 220px;
+  background-color: white;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-card img {
+  height: 320px;
+  object-fit: cover;
+}
+.product-card h3 {
+  margin-top: 15px;
+  color: #3b2418;
+}
+.product-card p {
+  color: #8b5e3c;
+  font-weight: bold;
+  margin: 8px 0 15px;
+}
+.add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #5a321f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-to-cart svg {
+  width: 18px;
+  height: 18px;
+}
+.add-to-cart:hover {
+  background-color: #8b5e3c;
+}
+/* ==============ABOUT SECTION================ */
+.about-preview {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #eadfd2;
+}
+.about-preview p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  font-size: 17px;
+}
+.about-preview a {
+  color: #7b4b2a;
+  font-weight: bold;
+}
+/* ==============CALL TO ACTION================ */
+.call-to-action {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #5a321f;
+  color: white;
+}
+.call-to-action h2 {
+  color: white;
+}
+.call-to-action p {
+  margin-bottom: 25px;
+}
+.call-to-action .shop-button {
+  background-color: #f4e3d8;
+  color: #3b2418;
+}
+
+/* ==============FOOTER================ */
+footer {
+  background-color: #2c1a12;
+  color: white;
+  padding: 45px 6%;
+  text-align: center;
+}
+.footer-content h2 {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+}
+.footer-links svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: -3px;
+}
+.footer-links a:hover {
+  margin: #d9bfa5;
+}
+.copyright {
+  font-size: 14px;
+  color: #d9c8bb;
+}
+
+/* ==============CART PAGE================ */
+.cart-section {
+  padding: 70px 6%;
+  background-color: #d9bfa5;
+  min-height: 500px;
+}
+.cart-section h1 {
+  text-align: center;
+  color: #3b2418;
+  margin-bottom: 40px;
+}
+.cart-item {
+  background-color: #eadfd2;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #eadfd2;
+}
+.cart-item h3 {
+  color: #3b2418;
+  margin-bottom: 10px;
+}
+.cart-item p {
+  margin-bottom: 8px;
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+.quantity-controls button {
+  background-color: #5a321f;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.quantity-controls button svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.quantity-controls button:hover {
+  background-color: #8b5e3c;
+}
+.quantity-controls span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.remove-item {
+  background-color: #5a321f;
+  color: wheat;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.remove-item:hover {
+  background-color: #8b5e3c;
+  color: white;
+}
+.cart-total {
+  display: flex;
+  background-color: #f4e3d8;
+  padding: 25px;
+  margin-top: 30px;
+  text-align: right;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.cart-total h2 {
+  color: #3b2418;
+}
+
+.cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  margin-left: 4px;
+
+  /* padding: 0 6px; */
+  border-radius: 999px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#clearCart {
+  background-color: #8b1076;
+  color: wheat;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* ==============CUSTOMER DETAILS================ */
+.customer-details {
+  max-width: 700px;
+  margin: 40px auto 25px;
+  padding: 30px;
+  background-color: #f9f6f2;
+  border: 1px solid #eadfd2;
+  border-radius: 10px;
+}
+.customer-details h2 {
+  color: #3b2418;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.customer-details label {
+  display: block;
+  text-align: left;
+  color: #4a2c20;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+.customer-details input,
+.customer-details textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #d8c7b8;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+.customer-details textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.customer-details input:focus,
+.customer-details textarea:focus {
+  outline: none;
+  border-color: #8b5e3c;
+}
+/* ==============WHATSAPP BUTTON================ */
+#whatsapp-order {
+  display: block;
+  margin: 0 auto;
+  background-color: #5a321f;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+#whatsapp-order:hover {
+  background-color: #8b5e3c;
+}
+/* ==============SHOP PAGES================ */
+.shop-page {
+  padding: 70px 6%;
+  text-align: center;
+  background-color: #d9bfa5;
+  min-height: 600px;
+}
+.shop-page h1 {
+  font-size: 40px;
+  color: #3b2418;
+  margin-bottom: 10px;
+}
+.shop-page > p {
+  color: #6b5143;
+  margin-bottom: 45px;
+  font-size: 17px;
+}
+.shop-page .product-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.shop-page .product-card {
+  width: 28%;
+  min-width: 220px;
+  /* width: 30%;
+    min-width: 250px; */
+  background-color: #eadfd2;
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.shop-page .product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #3b241826;
+}
+.shop-page .product-card img {
+  height: 350px;
+  object-fit: cover;
+}
+.shop-page .product-card h3 {
+  margin-top: 18px;
+}
+.shop-page .product-card p {
+  margin: 8px 0 15px;
+}
+
+/* ==============ABOUT PAGE=============== */
+.about-page {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #d9bfa5;
+  min-height: 500px;
+}
+.about-page h1 {
+  font-size: 42px;
+  color: #3b2418;
+  margin-bottom: 30px;
+}
+.about-page p {
+  min-width: 750px;
+  margin: 0 auto 20px;
+  font-size: 17px;
+  color: #6b5143;
+}
+.mission-section {
+  flex: 1;
+  padding: 70px 10%;
+  text-align: center;
+  background-color: #d9c8bb;
+}
+.mission-section h2 {
+  font-size: 32px;
+  color: #3b2418;
+  margin-bottom: 20px;
+}
+.mission-section p {
+  min-width: 700px;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+/* ==============CONTACT PAGE================ */
+.contact-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #d9bfa5;
+  min-height: 550px;
+}
+.contact-page h1 {
+  font-size: 42px;
+  color: #3b2418;
+  margin-bottom: 15px;
+}
+.contact-page > p {
+  color: #6b5143;
+  font-size: 17px;
+  margin-bottom: 45px;
+}
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+.contact-card {
+  width: 300px;
+  padding: 35px 25px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #eadfd2;
+}
+.contact-card h2 {
+  color: #3b2418;
+  margin-bottom: 15px;
+}
+.contact-card p {
+  color: #6b5143;
+  margin-bottom: 20px;
+}
+.contact-button {
+  display: inline-block;
+  background-color: #5a321f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.contact-button:hover {
+  background-color: #8b5e3c;
+}
+
+@media (min-width: 1101px), (min-width: 601px) and (min-height: 850px) {
+  .contact-info {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: clamp(30px, 4vw, 70px);
+  }
+
+  .contact-card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    min-height: clamp(300px, 36vh, 440px);
+    padding: clamp(35px, 4vw, 60px);
+  }
+
+  .contact-card h2 {
+    font-size: clamp(26px, 2.6vh, 34px);
+  }
+
+  .contact-card p {
+    font-size: clamp(18px, 1.8vh, 22px);
+  }
+
+  .contact-button {
+    font-size: clamp(17px, 1.6vh, 20px);
+    padding: clamp(12px, 1.4vh, 18px) clamp(20px, 2vh, 30px);
+  }
+}
+
+/* ==============RESPONSIVE LAYOUT================ */
+/* The toggle should be present in the existing navigation markup and its
+   script should toggle .active (or aria-expanded="true") on the button. */
+.menu-toggle,
+.hamburger,
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  header {
+    padding: 14px 5%;
+  }
+  nav {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle,
+  .hamburger,
+  #menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 7px 12px;
+    border: 1px solid #eadfd2;
+    border-radius: 5px;
+    background: transparent;
+    color: #f9f6f2;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-toggle::before,
+  .hamburger::before,
+  #menu-toggle::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    box-shadow:
+      0 -6px 0 currentColor,
+      0 6px 0 currentColor;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -5.56%;
+    right: -5.56%;
+    z-index: 1001;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 5%;
+    background: #2b170d;
+    border-top: 1px solid #4a2c20;
+  }
+  nav:has(.menu-toggle.active) .nav-links,
+  nav:has(.hamburger.active) .nav-links,
+  nav:has(#menu-toggle.active) .nav-links,
+  nav:has(.menu-toggle[aria-expanded="true"]) .nav-links,
+  nav:has(.hamburger[aria-expanded="true"]) .nav-links,
+  nav:has(#menu-toggle[aria-expanded="true"]) .nav-links,
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    display: flex;
+    padding: 12px 0;
+  }
+
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    padding: 55px 6%;
+    gap: 30px;
+  }
+  .hero-content,
+  .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    height: min(450px, 60vw);
+  }
+  .category-card,
+  .product-card,
+  .shop-page .product-card {
+    width: calc(50% - 15px);
+  }
+  .contact-info {
+    flex-wrap: wrap;
+  }
+  .about-page p,
+  .mission-section p {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+  .hero-image img {
+    height: 300px;
+  }
+  .category-card,
+  .product-card,
+  .shop-page .product-card {
+    width: 100%;
+  }
+  .category-card img,
+  .product-card img,
+  .shop-page .product-card img {
+    height: 280px;
+  }
+  .categories,
+  .featured-products,
+  .shop-page,
+  .about-page,
+  .contact-page,
+  .mission-section {
+    padding: 50px 6%;
+  }
+  .shop-page h1,
+  .about-page h1,
+  .contact-page h1 {
+    font-size: 34px;
+  }
+  .contact-card {
+    width: 100%;
+  }
+  .customer-details {
+    margin: 30px 6%;
+    padding: 20px;
+  }
+  .cart-total {
+    text-align: left;
+  }
+}
