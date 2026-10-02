@@ -1,6 +1,7 @@
 // ADD TO CART FUNCTION
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const mainClick = document.getElementById("main");
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", function () {
@@ -9,6 +10,14 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle("active", !isExpanded);
   });
 }
+
+
+mainClick.addEventListener("click", function () {
+  if (navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+});
 
 let cart;
 try {

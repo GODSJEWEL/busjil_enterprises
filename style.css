@@ -414,6 +414,12 @@ footer {
   line-height: 1;
 }
 
+.cart-link{
+  display: flex;
+  /* justify-content: space-between; */
+  /* border: 1px solid #eadfd2; */
+}
+
 #clearCart {
   background-color: #611d1d;
   color: #f9f6f2;

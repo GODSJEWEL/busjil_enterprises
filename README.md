@@ -1,0 +1,2 @@
+#BUSJIL Enterprises is a fashion e-commerce website created for a real clothing business.
+The website allows customers to browse clothes, shoes and fascinators, add products to a shopping cart, view their total and place orders through WhatsApp.
